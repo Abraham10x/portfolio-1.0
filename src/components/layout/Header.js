@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/logo.png';
+import Logo from '../../assets/images/logo.svg';
 import Button from '../elements/Button';
 
 const propTypes = {
@@ -79,7 +79,7 @@ const Header = ({
     <header
       {...props}
       className={classes}
-      style={{position: "fixed"}}
+      style={{position: "fixed", paddingTop: '1%', backgroundColor: '#FFF9E7'}}
     >
       <div className="container">
         <div className={
@@ -88,7 +88,7 @@ const Header = ({
             bottomDivider && 'has-bottom-divider'
           )}>
           {/* <Logo /> */}
-          <Link to="/"><img src={ Logo } width="60" alt="" className="float-righ"/></Link>
+          <Link to="/"><img src={ Logo } width="195" alt="logo" className="float-righ" style={{marginTop: '2%'}}/></Link>
           {/* <h3>Numeri</h3> */}
           {!hideNav &&
             <>
@@ -116,15 +116,32 @@ const Header = ({
                       navPosition && `header-nav-${navPosition}`
                     )}>
                       <li>
-                      <Link to="/collections" onClick={closeMenu}>My Collections</Link>
-                    </li>
+                        <Link to="/collections" onClick={closeMenu}>About Me</Link>
+                      </li>
+                      <li>
+                        <Link to="/collections" onClick={closeMenu}>Services</Link>
+                      </li>
+                      <li>
+                        <Link to="/collections" onClick={closeMenu}>Projects</Link>
+                      </li>
+                      <li>
+                        <Link to="/collections" onClick={closeMenu}>Contact</Link>
+                      </li>
                   </ul>
                   {!hideSignin &&
                     <ul
                       className="list-reset header-nav-right"
                     >
                       <li>
-                        <Button color={'#8364e2'}>Connect</Button>
+                      <Button 
+                            variant="contained"
+                            sx={{
+                              fontSize: '16px',
+                              textTransform: 'capitalize'
+                            }}
+                          >
+                            Resume
+                          </Button>
                       </li>
                     </ul>}
                 </div>

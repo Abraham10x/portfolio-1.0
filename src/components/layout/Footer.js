@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Logo from '../../assets/images/logo.png';
-import FooterNav from './partials/FooterNav';
+import Logo from '../../assets/images/logo.svg';
 import FooterSocial from './partials/FooterSocial';
+import { Box, Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   topOuterDivider: PropTypes.bool,
@@ -39,15 +40,25 @@ const Footer = ({
             'site-footer-inner',
             topDivider && 'has-top-divider'
           )}>
-          <div className="footer-top space-between text-xxs">
-            <img src={ Logo } width="60" alt="" className="float-righ"/>
-            <FooterSocial />
-          </div>
-          <div className="footer-bottom space-between text-xxs invert-order-desktop">
-            <FooterNav />
-            <div className="footer-copyright" style={{color: "#9CA9B3"}}>&copy; 2022 OONFTs. All right reserved</div>
-          </div>
+            <div className="footer-top" style={{marginTop: '100px'}}>
+            <Box>
+              <Grid container spacing={5} >
+                <Grid item xs={12} sm={6} md={6}>
+                  <Link to='/'>
+                    <img src={ Logo } width="250" alt="" className="float-righ" style={{marginBottom: '18px'}}/>
+                  </Link>
+                  <p>Fast-forward to today, and I’ve had the privilege of working at an advertising. a start-up, a huge corporation,</p>
+                </Grid>
+                <Grid item xs={12} sm={6} md={6}>
+                  <h2>Let’s <span>Connect.</span> 💬</h2>
+                  <FooterSocial />
+                </Grid>
+              </Grid>
+            </Box>
+            </div>
         </div>
+        <br/>
+          <div className="footer-copyright" style={{textAlign: 'center', textTransform: 'uppercase', paddingBottom: '5%'}}>Designed and built by Ameh Abraham</div>
       </div>
     </footer>
   );
