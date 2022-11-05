@@ -117,6 +117,32 @@ const Hero = ({
             </div>
             </Grid>
           </Grid>
+
+          <Grid container spacing={5} sx={{marginTop: '2%'}}>
+            <Grid item xs={12} sm={4} md={4}>          
+              <div className='recent'> <hr className='recent-line'/> <h5>My <span>recent projects.</span> </h5></div>
+            </Grid>
+            <Grid item xs={12} sm={8} md={8}>   
+              <Grid container spacing={2}>       
+                <Grid item xs={12} sm={3} md={3}>
+                  <h5 className='hero-h5'>50+</h5>
+                  <p>Projects Completed</p>
+                </Grid>
+                <Grid item xs={12} sm={3} md={3}>
+                  <h5 className='hero-h5'>10+</h5>
+                  <p>Design Projects</p>
+                </Grid>
+                <Grid item xs={12} sm={3} md={3}>
+                  <h5 className='hero-h5'>30+</h5>
+                  <p>Dev Projects</p>
+                </Grid>
+                <Grid item xs={12} sm={3} md={3}>
+                  <h5 className='hero-h5'>95.9%</h5>
+                  <p>Satisfied clients</p>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
         </div>
       </div>
     </section>

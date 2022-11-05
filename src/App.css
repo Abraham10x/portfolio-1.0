@@ -385,14 +385,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-hr {
+/* hr {
   border: 0;
   display: block;
   height: 1px;
   background: #25282C;
   margin-top: 24px;
   margin-bottom: 24px;
-}
+} */
 
 ul, ol {
   margin-top: 0;
@@ -2248,6 +2248,20 @@ textarea.form-input {
   position: absolute;
   top: 53%;
   right: 16%;
+}
+
+.recent {
+  display: flex;
+  justify-content: center;
+}
+
+.recent-line {
+  margin: auto 10% auto 0;
+  width: 20%;
+}
+
+.hero-h5 {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
